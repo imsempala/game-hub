@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import apiClient from "../services/api-client";
 import { CanceledError } from "axios";
+import { NumberInputFieldProps } from "@chakra-ui/react";
 
 export interface Platform{
     id: number;
@@ -13,6 +14,7 @@ export interface Game {
     name: string;
     background_image: string;
     parent_platforms: { platform: Platform }[]
+    metacritic: number;
 }
 
 interface FetchGamesResponse {
